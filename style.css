@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css?family=Literata&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Literata", serif;
+}
+#To-Do-List,
+#login-form,
+#clock-pro,
+#calcu {
+  padding: 50px 0;
+}
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  color: gray;
+}
+/*-----------------------to do list -------------------------*/
+
+.do-card {
+  background-color: #102e4a;
+  width: 30%;
+  margin: 50px auto;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 8px;
+  color: #009ffd;
+}
+
+#clear-btn {
+  width: 30%;
+  padding: 7px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(88, 88, 88);
+  border: none;
+}
+
+.card-header h2 {
+  margin: 0;
+}
+
+#input-text {
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+}
+
+#user-input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+}
+
+#items {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+#item {
+  margin: 10px 0;
+  padding: 5px 10px;
+}
+
+.remove-btn {
+  float: right;
+  background-color: #102e4a;
+  margin: 0;
+  padding: 5px;
+  font-size: 16px;
+  color: rgb(255, 0, 0);
+  border: none;
+}
+/*-----------------------login form  -------------------------*/
+.form {
+  width: 30%;
+  background-color: #2e2e2e;
+  margin: 50px auto;
+  padding: 10px;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 8px;
+  color: #c6f91f;
+  text-align: left;
+}
+fieldset {
+  margin: 10px;
+  padding: 10px;
+}
+.log-input {
+  width: 100%;
+  margin: 0;
+  height: 30px;
+  display: inline-block;
+}
+#log-btn {
+  background-color: #c6f91f;
+}
+/*-----------------------clock  -------------------------*/
+
+.clock {
+  background-color: #af125a;
+  width: 30%;
+  margin: 50px auto;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 8px;
+  color: #ffffff;
+}
+.activity {
+  margin: 10px;
+  padding: 10px;
+}
+.clock img {
+  max-height: 400px;
+}
+/*-----------------------calculator-------------------------*/
+.calculator {
+  background-color: #102e4a;
+  width: 30%;
+  margin: 50px auto;
+  border: 1px solid rgb(151, 151, 151);
+  border-radius: 8px;
+  color: #009ffd;
+}
+#screen {
+  height: 70px;
+  background-color: white;
+  margin: 10px;
+  width: 90%;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 100px));
+  grid-gap: 15px 0;
+  justify-content: space-between;
+  margin: 20px;
+}
+.buttons button {
+  min-height: 70px;
+}
+.buttons p {
+  height: 50px;
+  background-color: gray;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+#equal {
+  grid-row: span 2;
+}
+/*-----------------------slider-------------------------*/
+#slid {
+  margin: 50px 0;
+  padding: 50px 0;
+}
+.slider img {
+  max-height: 600px;
+}
+.img-slider {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  border: 2px solid gray;
+}
+.slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+.slider1 {
+  background-image: url("images/img1.jpg");
+}
+.slider2 {
+  background-image: url("images/img2.jpg");
+}
+.slider3 {
+  background-image: url("images/img3.jpg");
+}
+.arr {
+  position: absolute;
+  cursor: pointer;
+  top: 45%;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  margin: 0 10px;
+  border: 2px solid rgb(177, 177, 177);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.arr:hover {
+  opacity: 1;
+}
+#right-arr {
+  right: 0;
+}
+/*-----------------------weather-------------------------*/
+
+.weather-app {
+  width: 30%;
+  padding: 20px;
+  background-color: rgb(44, 255, 185);
+  margin: 0 auto;
+  color: white;
+}
+.weather-cont {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  text-align: left;
+}
+.location,
+.temprture,
+.humidity,
+.wind {
+  margin: 10px;
+}
+.weather-app .fas {
+  color: rgb(24, 124, 124);
+}
+.weather-cont p {
+  display: inline-block;
+  margin: 0px;
+}
+.weather-app input {
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;
+  background: none;
+  font-size: 1rem;
+  color: white;
+}
+#cityBtn {
+  width: auto;
+  display: inline-block;
+  cursor: pointer;
+}
+#getweather {
+  cursor: pointer;
+}

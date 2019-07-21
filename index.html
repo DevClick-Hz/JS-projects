@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="style.css" rel="styleSheet" />
+    <title>JavaScript Projects</title>
+    <script src="https://kit.fontawesome.com/51162166c3.js"></script>
+  </head>
+
+  <body>
+    <!-----------------------------------To Do List------------------------------------>
+    <div id="To-Do-List">
+      <h1>To-Do-List Project</h1>
+      <div class="do-card">
+        <h2>Today Tasks</h2>
+        <button id="clear-btn"><i class="fas fa-brush"></i> Clear Tasks</button>
+        <div id="items"></div>
+        <div id="input-text">
+          <input type="text" id="user-input" placeholder="Add a Task" />
+          <button id="add-btn"><i class="fas fa-plus-circle"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------login Authentication ------------------------------------>
+    <div id="login-form">
+      <h1>Login Authentication Project</h1>
+      <div class="form">
+        <fieldset>
+          <legend>Sign In</legend>
+          <label><i class="fas fa-user-alt"></i></label>
+          <input
+            id="u-input"
+            class="log-input"
+            type="text"
+            placeholder="username"
+            required
+          />
+          <label><i class="fas fa-key"></i></label>
+          <input
+            id="p-input"
+            class="log-input"
+            type="password"
+            placeholder="Password"
+            required
+          />
+          <button id="log-btn" type="submit">Login</button>
+        </fieldset>
+      </div>
+      <h3>Try (Erin , 789)</h3>
+    </div>
+    <!-----------------------------------clock ------------------------------------>
+    <div id="clock-pro">
+      <h1>Clock and Activites</h1>
+      <div class="clock">
+        <h2>Time now</h2>
+        <div id="time"></div>
+        <div class="activity">
+          <img src="" />
+          <h3 id="activities"></h3>
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------calculator ------------------------------------>
+    <div id="calcu">
+      <h1>Basic Calculator</h1>
+      <div class="calculator">
+        <input id="screen" />
+        <div class="buttons">
+          <button onclick="clean()">C</button>
+          <button onclick="back()"><i class="fas fa-backspace"></i></button>
+          <button onclick="addNum('/')">/</button>
+          <button onclick="addNum('*')">*</button>
+          <button id="num" onclick="addNum(7)">7</button>
+          <button id="num" onclick="addNum(8)">8</button>
+          <button id="num" onclick="addNum(9)">9</button>
+          <button onclick="addNum('-')">-</button>
+          <button id="num" onclick="addNum(4)">4</button>
+          <button id="num" onclick="addNum(5)">5</button>
+          <button id="num" onclick="addNum(6)">6</button>
+          <button onclick="addNum('+')">+</button>
+          <button id="num" onclick="addNum(1)">1</button>
+          <button id="num" onclick="addNum(2)">2</button>
+          <button id="num" onclick="addNum(3)">3</button>
+          <button id="equal" onclick="equal()">=</button>
+          <button onclick="addNum('-')">-/+</button>
+          <button id="num" onclick="addNum(0)">0</button>
+          <button onclick="addNum('.')">,</button>
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------Image slider ------------------------------------>
+    <div id="slid">
+      <h1>Image slider</h1>
+      <div class="img-slider">
+        <div class="arr" id="left-arr">
+          <i class="fas fa-arrow-left fa-2x"></i>
+        </div>
+        <div class="slide slider1"></div>
+        <div class="slide slider2"></div>
+        <div class="slide slider3"></div>
+        <div class="arr" id="right-arr">
+          <i class="fas fa-arrow-right fa-2x"></i>
+        </div>
+      </div>
+    </div>
+    <!-----------------------------------weather app ------------------------------------>
+    <div id="weather">
+      <h1>Weather App</h1>
+      <div class="weather-app">
+        <h3>Enter city name :</h3>
+        <input type="text" id="city-inpt" />
+        <i id="getweather" class="fas fa-map-marker-alt"></i>
+        <div class="weather-cont">
+          <div class="temprture">
+            <i class="fas fa-thermometer-three-quarters"></i>
+            <p id="temp"></p>
+          </div>
+          <div class="location">
+            <i class="fas fa-search-location"></i>
+            <p id="city"></p>
+          </div>
+          <div class="humidity">
+            <i class="fas fa-tint"></i>
+            <p id="humidity"></p>
+          </div>
+          <div class="wind">
+            <i class="fas fa-wind"></i>
+            <p id="wind"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/slider.js"></script>
+    <script src="src/to-do-list.js"></script>
+    <script src="src/login.js"></script>
+    <script src="src/clock.js"></script>
+    <script src="src/calcu.js"></script>
+    <script src="src/weather.js"></script>
+  </body>
+</html>
