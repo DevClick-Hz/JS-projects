@@ -9,10 +9,12 @@ let id = 0;
 let data = localStorage.getItem("TASKS");
 if (data) {
   tasksList = JSON.parse(data);
+  id = tasksList.length;
   loadList(tasksList); // load the list to the user interface
 } else {
   // if data isn't empty
   tasksList = [];
+  id = 0;
 }
 
 function loadList(array) {
@@ -38,8 +40,6 @@ function addingItem(theTask, id, trash) {
 
   const position = "beforeend";
   items.insertAdjacentHTML(position, item);
-
-  document.getElementById("user-input").value = "";
 }
 
 // add item on click
@@ -54,6 +54,22 @@ addBtn.addEventListener("click", function() {
     });
     localStorage.setItem("TASKS", JSON.stringify(tasksList));
     id++;
+  }
+  document.getElementById("user-input").value = "";
+});
+userText.addEventListener("keyup", function() {
+  let theTask = userText.value;
+  if (event.keyCode == 13) {
+    if (theTask) {
+      addingItem(theTask, id, false);
+      tasksList.push({
+        name: theTask,
+        id: id,
+        trash: false
+      });
+      id++;
+    }
+    document.getElementById("user-input").value = "";
   }
 });
 // remove to do
