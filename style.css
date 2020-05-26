@@ -7,11 +7,10 @@ body {
   font-size: 20px;
   font-family: "Literata", serif;
 }
-#To-Do-List,
-#login-form,
-#clock-pro,
-#calcu {
-  padding: 50px 0;
+#To-Do-List,#login-form,#clock-pro,#calcu,#slid,#weather,#rock{
+  width: 40%;
+  margin:0;
+  padding:0;
 }
 img {
   display: block;
@@ -21,12 +20,15 @@ img {
 h1 {
   color: gray;
 }
+.flx{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
 /*-----------------------to do list -------------------------*/
 
 .do-card {
   background-color: #102e4a;
-  width: 30%;
-  margin: 50px auto;
   border: 1px solid rgb(151, 151, 151);
   border-radius: 8px;
   color: #009ffd;
@@ -78,9 +80,7 @@ h1 {
 }
 /*-----------------------login form  -------------------------*/
 .form {
-  width: 30%;
   background-color: #2e2e2e;
-  margin: 50px auto;
   padding: 10px;
   border: 1px solid rgb(151, 151, 151);
   border-radius: 8px;
@@ -104,7 +104,6 @@ fieldset {
 
 .clock {
   background-color: #af125a;
-  width: 30%;
   margin: 50px auto;
   border: 1px solid rgb(151, 151, 151);
   border-radius: 8px;
@@ -120,7 +119,6 @@ fieldset {
 /*-----------------------calculator-------------------------*/
 .calculator {
   background-color: #102e4a;
-  width: 30%;
   margin: 50px auto;
   border: 1px solid rgb(151, 151, 151);
   border-radius: 8px;
@@ -153,15 +151,10 @@ fieldset {
   grid-row: span 2;
 }
 /*-----------------------slider-------------------------*/
-#slid {
-  margin: 50px 0;
-  padding: 50px 0;
-}
 .slider img {
   max-height: 600px;
 }
 .img-slider {
-  width: 70%;
   margin: 0 auto;
   position: relative;
   border: 2px solid gray;
@@ -201,7 +194,6 @@ fieldset {
 /*-----------------------weather-------------------------*/
 
 .weather-app {
-  width: 30%;
   padding: 20px;
   background-color: rgb(44, 255, 185);
   margin: 0 auto;
@@ -269,8 +261,16 @@ span.population {
 }
 /*-----------------------rock paper-------------------------*/
 #rock {
-  margin: 50px 0;
-  padding: 100px 0;
+  color: white;
+}
+#rock h2,#rock h3{
+  margin:10px 25px;
+  padding:0;
+  display: inline;
+}
+.bg{
+  background-color: #a10064;
+  padding:10px;
 }
 .user-side {
   display: flex;
@@ -278,8 +278,8 @@ span.population {
   margin: 0 auto;
 }
 .user-side img {
-  height: 200px;
-  width: 200px;
+  max-height: 200px;
+  max-width: 25%;
   cursor: pointer;
 }
 .pc-side {
@@ -288,10 +288,13 @@ span.population {
   margin: 0 auto;
 }
 .pc-side img {
-  height: 200px;
-  width: 200px;
+  max-height: 200px;
+  max-width: 25%;
   display: none;
 }
-.hide-op {
-  display: none;
+.btn{
+  background-color: rgb(255, 0, 179);
+  color: white;
+  width: 100px;
+  padding: 5px;
 }

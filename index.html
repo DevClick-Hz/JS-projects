@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-    />
-    <link href="style.css" rel="styleSheet" />
-    <title>JavaScript Projects</title>
-    <script src="https://kit.fontawesome.com/51162166c3.js"></script>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <link href="style.css" rel="styleSheet" />
+  <title>JavaScript Projects</title>
+  <script src="https://kit.fontawesome.com/51162166c3.js"></script>
+</head>
+
+<body>
+  <div class="flx">
     <!-----------------------------------To Do List------------------------------------>
     <div id="To-Do-List">
       <h1>To-Do-List Project</h1>
@@ -34,27 +33,17 @@
         <fieldset>
           <legend>Sign In</legend>
           <label><i class="fas fa-user-alt"></i></label>
-          <input
-            id="u-input"
-            class="log-input"
-            type="text"
-            placeholder="username"
-            required
-          />
+          <input id="u-input" class="log-input" type="text" placeholder="username" required />
           <label><i class="fas fa-key"></i></label>
-          <input
-            id="p-input"
-            class="log-input"
-            type="password"
-            placeholder="Password"
-            required
-          />
+          <input id="p-input" class="log-input" type="password" placeholder="Password" required />
           <button id="log-btn" type="submit">Login</button>
         </fieldset>
       </div>
       <h3>Try (Erin , 789)</h3>
     </div>
-    <!-----------------------------------clock ------------------------------------>
+  </div>
+  <!-----------------------------------clock ------------------------------------>
+  <div class="flx">
     <div id="clock-pro">
       <h1>Clock and Activites</h1>
       <div class="clock">
@@ -94,7 +83,9 @@
         </div>
       </div>
     </div>
-    <!-----------------------------------Image slider ------------------------------------>
+  </div>
+  <!-----------------------------------Image slider ------------------------------------>
+  <div class="flx">
     <div id="slid">
       <h1>Image slider</h1>
       <div class="img-slider">
@@ -137,29 +128,39 @@
         </div>
       </div>
     </div>
-    <!-----------------------------------Rock paper Game ------------------------------------>
-    <!--<div id="rock">
+  </div>
+  <!-----------------------------------Rock paper Game ------------------------------------>
+  <div class="flx">
+    <div id="rock">
       <h1>Rock Paper scissors</h1>
-      <h2>pick a choice</h2>
-      <div class="user-side">
-        <img class="hum" src="images/icn_finger_hand_punch_fist_-512.png" />
-        <img class="hum" src="images/341564-200.png" />
-        <img class="hum" src="images/477922-200.png" />
+      <div class="bg">
+        <h3>Pc:<h3 class="pc">0</h3>
+        </h3>
+        <h2>pick a choice</h2>
+        <h3>You:<h3 class="you">0</h3>
+        </h3>
+        <div class="user-side">
+          <img class="rock hum" src="images/rock.png" />
+          <img class="scissors hum" src="images/scissors.png" />
+          <img class="paper hum" src="images/paper.png" />
+        </div>
+        <div class="pc-side">
+          <img class="rock-p choice" src="images/rock.png" />
+          <img class="scissors-p choice" src="images/scissors.png" />
+          <img class="paper-p choice" src="images/paper.png" />
+        </div>
+        <button class="btn">Again ?</button>
       </div>
-      <div class="pc-side">
-        <img class="choice" src="images/icn_finger_hand_punch_fist_-512.png" />
-        <img class="choice" src="images/341564-200.png" />
-        <img class="choice" src="images/477922-200.png" />
-      </div>
-    </div>---->
-    <!------working on it----->
-    <!-----------------------------------    scripts    ------------------------------------->
-    <script src="src/rock.js"></script>
-    <script src="src/slider.js"></script>
-    <script src="src/to-do-list.js"></script>
-    <script src="src/login.js"></script>
-    <script src="src/clock.js"></script>
-    <script src="src/calcu.js"></script>
-    <script src="src/weather.js"></script>
-  </body>
+    </div>
+  </div>
+  <!-----------------------------------    scripts    ------------------------------------->
+  <script src="src/rock.js"></script>
+  <script src="src/slider.js"></script>
+  <script src="src/to-do-list.js"></script>
+  <script src="src/login.js"></script>
+  <script src="src/clock.js"></script>
+  <script src="src/calcu.js"></script>
+  <script src="src/weather.js"></script>
+</body>
+
 </html>
