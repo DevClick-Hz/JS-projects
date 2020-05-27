@@ -10,24 +10,23 @@ let userChos = [rock, paper, scissors];
 const pc = document.querySelector(".pc");
 const you = document.querySelector(".you");
 const btn = document.querySelector(".btn");
-let num = Math.floor(Math.random() * 3)
 let comp;
 
 // computer pick option randomly 
 
 function pcChoice () {
+  let num = Math.floor(Math.random() * 3)
   for (let i = 0;i < pcChos.length;i++) {
-    pcChos[num].style.display = "block";
     comp = pcChos[num];
+    comp.style.display = "block";
   }
 }
-
 // when the user click on rock here what will happen
 
 function roclk () {
+  pcChoice();
   paper.style.display = "none";
   scissors.style.display = "none";
-  pcChoice();
   switch (comp) {
     case rock_p:
       let draw = document.createElement("h2");
@@ -121,7 +120,6 @@ btn.addEventListener('click', function reshow () {
   rock.addEventListener("click", roclk);
   paper.addEventListener("click", papclk);
   scissors.addEventListener("click", scisclk);
-
 });
 
 // function to stop lsning to clicking after being clicking an option

@@ -17,19 +17,19 @@ if (data) {
   id = 0;
 }
 
-function loadList(array) {
-  array.forEach(function(item) {
+function loadList (array) {
+  array.forEach(function (item) {
     addingItem(item.name, item.id, item.trash);
   });
 }
 
 // clear the storage
-clear.addEventListener("click", function() {
+clear.addEventListener("click", function () {
   localStorage.clear();
   location.reload();
 });
 // add item function
-function addingItem(theTask, id, trash) {
+function addingItem (theTask, id, trash) {
   if (trash) {
     return;
   }
@@ -43,7 +43,7 @@ function addingItem(theTask, id, trash) {
 }
 
 // add item on click
-addBtn.addEventListener("click", function() {
+addBtn.addEventListener("click", function () {
   let theTask = userText.value;
   if (theTask) {
     addingItem(theTask, id, false);
@@ -57,7 +57,7 @@ addBtn.addEventListener("click", function() {
   }
   document.getElementById("user-input").value = "";
 });
-userText.addEventListener("keyup", function() {
+userText.addEventListener("keyup", function () {
   let theTask = userText.value;
   if (event.keyCode == 13) {
     if (theTask) {
@@ -67,17 +67,18 @@ userText.addEventListener("keyup", function() {
         id: id,
         trash: false
       });
+      localStorage.setItem("TASKS", JSON.stringify(tasksList));
       id++;
     }
     document.getElementById("user-input").value = "";
   }
 });
 // remove to do
-function removeToDo(element) {
+function removeToDo (element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
   tasksList[element.id].trash = true;
 }
-items.addEventListener("click", function(event) {
+items.addEventListener("click", function (event) {
   const element = event.target; // return the clicked element inside list
   const elementJob = element.attributes.job.value; // complete or delete
 
