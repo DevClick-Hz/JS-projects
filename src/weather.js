@@ -9,7 +9,7 @@ class weather {
   }
   // weather informations
   async displayweather() {
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=4eddfe1ea7e550a2ec14cc5d49a0f913
+    const api = `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=celsius&appid=4eddfe1ea7e550a2ec14cc5d49a0f913
     `
     try {
       const response = await fetch(api)
