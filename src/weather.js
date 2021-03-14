@@ -9,7 +9,7 @@ class weather {
   }
   // weather informations
   async displayweather() {
-    const api = `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=celsius&appid=4eddfe1ea7e550a2ec14cc5d49a0f913
+    const api = `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=4eddfe1ea7e550a2ec14cc5d49a0f913
     `
     try {
       const response = await fetch(api)
@@ -65,7 +65,7 @@ document.getElementById("city-inpt").addEventListener("keyup", function() {
         }
         async displayweather() {
           let userCity = document.getElementById("city-inpt").value
-          const api = `http://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=celsius&appid=4eddfe1ea7e550a2ec14cc5d49a0f913`
+          const api = `http://api.openweathermap.org/data/2.5/weather?q=${userCity}&units=metric&appid=4eddfe1ea7e550a2ec14cc5d49a0f913`
           try {
             const response = await fetch(api)
             try {
